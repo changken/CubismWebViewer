@@ -29,8 +29,12 @@ export const ViewLogicalMaxRight = 2.0;
 export const ViewLogicalMaxBottom = -2.0;
 export const ViewLogicalMaxTop = 2.0;
 
+const pathNameRegex = new RegExp('(.)+\.html','i');
+
+const pathName = pathNameRegex.test(location.pathname) ? "/" : location.pathname;
+
 // 相対パス
-export const ResourcesPath = location.protocol + "//" + location.host + "/" + location.pathname + '/Resources/';
+export const ResourcesPath = location.protocol + "//" + location.host + "/" + pathName + '/Resources/';
 
 // モデルの後ろにある背景の画像ファイル
 export const BackImageName = 'back_class_normal.png';
