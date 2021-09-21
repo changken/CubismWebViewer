@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1900">
+  <title>TypeScript HTML App</title>
+  <style>
+    html, body {
+        margin: 0;
+        overflow: hidden;
+    }
+    .reveal{
+      position: absolute !important;
+      top: 20px;
+      background: rgba(0,0,0,0.3);
+    }
+  </style>
+
+  <!--reveal.js-->
+  <link rel="stylesheet" href="vendor/dist/reset.css">
+  <link rel="stylesheet" href="vendor/dist/reveal.css">
+  <link rel="stylesheet" href="vendor/dist/theme/black.css">
+
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="vendor/plugin/highlight/monokai.css">
+
+  <!-- Pollyfill script -->
+  <script src="https://unpkg.com/core-js-bundle@3.6.1/minified.js"></script>
+  <!-- Live2DCubismCore script -->
+  <script src = "../../../Core/live2dcubismcore.js"></script>
+  <!-- Build script -->
+  <script src = "./dist/bundle.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!--我做兩頁-->
+      <!--一個section一頁-->
+      <!--左右切換 每頁都是cubism 人物 循環播放角色動作 不同頁面不同角色-->
+      <section>
+        <h5>ParamAngleX</h5>
+        <input type="range" id="angleX" min="-100" max="100" value="0">
+        <h5>ParamAngleY</h5>
+        <input type="range" id="angleY" min="0" max="100" value="0">
+        <h5>ParamAngleZ</h5>
+        <input type="range" id="angleZ" min="-100" max="100" value="0">
+        <h5>ParamBodyAngleX</h5>
+        <input type="range" id="bodyAngleX" min="0" max="100" value="0">
+        <h5>ParamEyeAngleX</h5>
+        <input type="range" id="eyeAngleX" min="0" max="100" value="0">
+        <h5>ParamEyeAngleY</h5>
+        <input type="range" id="eyeAngleY" min="0" max="100" value="0">
+
+        <h5>mouth Form</h5>
+        <input type="range" id="mouthForm" min="-100" max="100" value="0">
+        <h5>mouth Y</h5>
+        <input type="range" id="mouthY" min="0" max="100" value="0">
+      </section>
+      <!-- <section>Slide 2</section>
+      <section>Slide 3</section>
+      <section>Slide 4</section>
+      <section>Slide 5</section>
+      <section>Slide 6</section> -->
+    </div>
+  </div>
+  <script src="vendor/dist/reveal.js"></script>
+  <script src="vendor/plugin/notes/notes.js"></script>
+  <script src="vendor/plugin/markdown/markdown.js"></script>
+  <script src="vendor/plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    });
+  </script>
+</body>
+</html>
